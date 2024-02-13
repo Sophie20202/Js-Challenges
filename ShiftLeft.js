@@ -1,9 +1,11 @@
-function shiftLeft(arr) {
+function shiftArrayLeft(arr) {
     if (arr.length <= 1) {
-        return arr; // No need to shift if array has 0 or 1 element
+        return arr;
     }
+
+    let firstElement = arr.shift();
     
-    const firstElement = arr.shift(); // Remove the first element and store it
-    arr.push(firstElement); // Push the removed element to the end of the array
+    arr.push(firstElement);
+    
     return arr;
 }

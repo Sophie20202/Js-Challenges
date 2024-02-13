@@ -1,11 +1,10 @@
-function Prime(number){
-    let num = parseInt(prompt("Enter a number to calculate its factorial:"))
-    if (num < 2) {
+function Prime(number) {
+    if (number < 2) {
         alert(number + " is not a prime number.");
         return false;
     }
-    for (let i = 2; i <= number; i++) {
-        if (num % i === 0) {
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
             alert(number + " is not a prime number.");
             return false;
         }

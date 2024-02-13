@@ -1,9 +1,13 @@
 function removeDuplicates(array) {
-    let uniqueArray = [];
+    
+    let uniqueValues = {};
+
     for (let value of array) {
-        if (!uniqueArray.includes(value)) {
-            uniqueArray.push(value);
-        }
+        uniqueValues[value] = true;
     }
+    let uniqueArray = Object.keys(uniqueValues);
+
+    uniqueArray = uniqueArray.map(Number);
+
     return uniqueArray;
 }
